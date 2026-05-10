@@ -315,7 +315,7 @@ async function callKimi(env, prompt, ms = 25000) {
         'X-Title':       'BrandBone Agency',
       },
       body: JSON.stringify({
-        model:      'moonshotai/moonshot-v1-8k',
+        model:     'deepseek/deepseek-v3.1-terminus', 
         messages:   [{ role: 'user', content: AGENCY_SYSTEM + '\n\n' + prompt }],
         max_tokens: 2000, temperature: 0.7,
       }),
@@ -326,7 +326,7 @@ async function callKimi(env, prompt, ms = 25000) {
     const d = await r.json();
     const t = d?.choices?.[0]?.message?.content;
     if (!t) throw new Error('Kimi: empty response');
-    return { text: t, model: 'kimi-k2.5' };
+    return { text: t, model: 'deepseek-v3.1' };
   } catch(e) { clearTimeout(timer); throw e; }
 }
 
@@ -1021,7 +1021,7 @@ async function router(request, env, ctx) {
   if (path === '/v1/health' || path === '/health') {
     return jRes(ok({
       status:'operational', version:'5.0',
-      models:['kimi-k2.5','claude-haiku'],
+      models:['deepseek-v3.1-terminus','claude-haiku'],
       images:'openrouter-flux1dev→pollinations→hf',
       cache:'cloudflare-kv', db:'supabase', email: !!env.RESEND_KEY,
     },'system'), 200, env, origin);
