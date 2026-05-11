@@ -315,7 +315,7 @@ async function callKimi(env, prompt, ms = 25000) {
         'X-Title':       'BrandBone Agency',
       },
       body: JSON.stringify({
-        model:     'deepseek/deepseek-v3.1-terminus', 
+        model:     'deepseek/deepseek-chat', 
         messages:   [{ role: 'user', content: AGENCY_SYSTEM + '\n\n' + prompt }],
         max_tokens: 2000, temperature: 0.7,
       }),
@@ -1021,7 +1021,7 @@ async function router(request, env, ctx) {
   if (path === '/v1/health' || path === '/health') {
     return jRes(ok({
       status:'operational', version:'5.0',
-      models:['deepseek-v3.1-terminus','claude-haiku'],
+      models:['deepseek-chat','claude-haiku'],
       images:'openrouter-flux1dev→pollinations→hf',
       cache:'cloudflare-kv', db:'supabase', email: !!env.RESEND_KEY,
     },'system'), 200, env, origin);
