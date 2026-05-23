@@ -1,0 +1,31 @@
+name = "brandbone-worker"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+WORKER_VERSION = "2.0.0"
+ENVIRONMENT = "production"
+
+[[kv_namespaces]]
+binding = "BB_CACHE"
+id = "PASTE_BB_CACHE_ID_HERE"
+
+[[kv_namespaces]]
+binding = "BB_TASKS"
+id = "PASTE_BB_TASKS_ID_HERE"
+
+[env.staging]
+name = "brandbone-worker-staging"
+
+[env.staging.vars]
+WORKER_VERSION = "2.0.0-staging"
+ENVIRONMENT = "staging"
+
+[[env.staging.kv_namespaces]]
+binding = "BB_CACHE"
+id = "PASTE_STAGING_BB_CACHE_ID_HERE"
+
+[[env.staging.kv_namespaces]]
+binding = "BB_TASKS"
+id = "PASTE_STAGING_BB_TASKS_ID_HERE"
