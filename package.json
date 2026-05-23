@@ -1,0 +1,18 @@
+{
+  "name": "brandbone-worker",
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "deploy:staging": "wrangler deploy --env staging",
+    "setup:kv": "wrangler kv:namespace create BB_CACHE && wrangler kv:namespace create BB_TASKS"
+  },
+  "dependencies": {
+    "hono": "^4.4.0"
+  },
+  "devDependencies": {
+    "wrangler": "^3.60.0"
+  }
+}
+
