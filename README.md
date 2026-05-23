@@ -1,1 +1,0 @@
-# brandbone-worker
