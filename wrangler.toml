@@ -1,4 +1,0 @@
-name = "brandbone-worker"
-main = "brandbone_worker_v5_openrouter.js"
-compatibility_date = "2024-05-09"
-
