@@ -73,7 +73,7 @@ Email 1 (immediate): Subject, preview, body, CTA
 Email 2 (day 3): Subject, preview, body, CTA
 Email 3 (day 7 conversion): Subject, preview, body with objection handling, strong CTA`,
 
-    export: `Compile complete campaign brief for: "${goal}"
+    brief: `Compile complete campaign brief for: "${goal}"
 Include: Executive summary, strategy, top 2 creatives, audience, channel mix, week-1 calendar, 5 KPIs, next steps.`
   }
   return { systemPrompt: AGENT_SYSTEM, userPrompt: prompts[stepType] || prompts.strategy }
@@ -84,6 +84,5 @@ export const AGENT_STEPS = [
   { number: 2, type: 'creative',  label: 'Ad Creatives'        },
   { number: 3, type: 'audience',  label: 'Audience Targeting'  },
   { number: 4, type: 'email',     label: 'Email Sequence'      },
-  { number: 5, type: 'export',    label: 'Complete Brief'      }
+  { number: 5, type: 'brief',     label: 'Complete Brief'      }
 ]
-
