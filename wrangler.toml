@@ -9,11 +9,11 @@ ENVIRONMENT = "production"
 
 [[kv_namespaces]]
 binding = "BB_CACHE"
-id = "PASTE_BB_CACHE_ID_HERE"
+id = "baf0005a4d46461d8778322e83936d26"
 
 [[kv_namespaces]]
 binding = "BB_TASKS"
-id = "PASTE_BB_TASKS_ID_HERE"
+id = "a5b36b24090a4a42b704c452c56abb27"
 
 [env.staging]
 name = "brandbone-worker-staging"
@@ -24,8 +24,8 @@ ENVIRONMENT = "staging"
 
 [[env.staging.kv_namespaces]]
 binding = "BB_CACHE"
-id = "PASTE_STAGING_BB_CACHE_ID_HERE"
+id = "baf0005a4d46461d8778322e83936d26"
 
 [[env.staging.kv_namespaces]]
 binding = "BB_TASKS"
-id = "PASTE_STAGING_BB_TASKS_ID_HERE"
+id = "a5b36b24090a4a42b704c452c56abb27"
