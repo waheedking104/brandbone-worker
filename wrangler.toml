@@ -29,3 +29,17 @@ id = "baf0005a4d46461d8778322e83936d26"
 [[env.staging.kv_namespaces]]
 binding = "BB_TASKS"
 id = "a5b36b24090a4a42b704c452c56abb27"
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
+
+[observability.traces]
+enabled = false
+persist = true
+head_sampling_rate = 1
